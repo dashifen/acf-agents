@@ -1,0 +1,27 @@
+{
+    "name": "dashifen/acf-agent",
+    "description": "An Agent for use with one of my Handler packages that manages ACF data.",
+    "minimum-stability": "stable",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Dashifen Kees",
+            "email": "dashifen@dashifen.com",
+            "role": "developer"
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Dashifen\\ACFAgent\\": "src/"
+        }
+    }
+    "require": {
+        "php": ">=7.3",
+        "dashifen/wp-handler": "^9.4"
+    }
+}
