@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e54db559ec2de155f5221e6d40483012",
+    "content-hash": "4738935ab63b86582e63ba4f25b299dc",
     "packages": [
         {
             "name": "dashifen/collection",
@@ -206,6 +206,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.3"
+    },
     "platform-dev": []
 }
