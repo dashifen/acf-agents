@@ -11,14 +11,14 @@
             "role": "developer"
         }
     ],
-    "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true
-    },
     "autoload": {
         "psr-4": {
             "Dashifen\\ACFAgent\\": "src/"
         }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
     },
     "require": {
         "php": ">=7.3",
