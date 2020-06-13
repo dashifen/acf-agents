@@ -23,6 +23,6 @@
   "require": {
     "php": ">=7.3",
     "ext-json": "*",
-    "dashifen/wp-handler": "^9.6",
+    "dashifen/wp-handler": "^9.6"
   }
 }
