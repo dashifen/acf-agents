@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4738935ab63b86582e63ba4f25b299dc",
+    "content-hash": "b57f5a23ed22eb90ef83f0b379333a60",
     "packages": [
         {
             "name": "dashifen/collection",
@@ -160,16 +160,16 @@
         },
         {
             "name": "dashifen/wp-handler",
-            "version": "9.4.1",
+            "version": "9.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dashifen/wp-handler.git",
-                "reference": "0a0f63bbcf1d602f8ffa44ace91d4f20e26a4c81"
+                "reference": "d39cc54f789f483007f39595b84158dd355ffb75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/0a0f63bbcf1d602f8ffa44ace91d4f20e26a4c81",
-                "reference": "0a0f63bbcf1d602f8ffa44ace91d4f20e26a4c81",
+                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/d39cc54f789f483007f39595b84158dd355ffb75",
+                "reference": "d39cc54f789f483007f39595b84158dd355ffb75",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
                 }
             ],
             "description": "An object to define handlers for various WordPress action and filter hooks using protected methods. ",
-            "time": "2020-03-02T14:29:51+00:00"
+            "time": "2020-04-30T17:44:04+00:00"
         }
     ],
     "packages-dev": [],
@@ -207,7 +207,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.3"
+        "php": ">=7.3",
+        "ext-json": "*"
     },
     "platform-dev": []
 }

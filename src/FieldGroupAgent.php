@@ -4,13 +4,13 @@ namespace Dashifen\ACFAgent;
 
 use WP_Post;
 use DirectoryIterator;
+use Dashifen\WPHandler\Agents\AbstractAgent;
 use Dashifen\Repository\RepositoryException;
 use Dashifen\ACFAgent\Repositories\FieldGroup;
-use Dashifen\WPHandler\Agents\AbstractThemeAgent;
+use Dashifen\WPHandler\Handlers\HandlerInterface;
 use Dashifen\WPHandler\Handlers\HandlerException;
-use Dashifen\WPHandler\Handlers\Themes\ThemeHandlerInterface;
 
-class FieldGroupAgent extends AbstractThemeAgent
+class FieldGroupAgent extends AbstractAgent
 {
     /**
      * @var string
@@ -20,13 +20,13 @@ class FieldGroupAgent extends AbstractThemeAgent
     /**
      * FieldGroupAgent constructor.
      *
-     * @param ThemeHandlerInterface $handler
+     * @param HandlerInterface $handler
      * @param string                $folder
      */
-    public function __construct (ThemeHandlerInterface $handler, string $folder = '/assets/acf')
+    public function __construct (HandlerInterface $handler, string $folder)
     {
-        $this->acfFolder = $this->getStylesheetDir() . $folder;
         parent::__construct($handler);
+        $this->acfFolder = $folder;
     }
     
     /**
