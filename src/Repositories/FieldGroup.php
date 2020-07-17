@@ -14,42 +14,42 @@ use Dashifen\Repository\Repository;
  */
 class FieldGroup extends Repository
 {
-    /**
-     * @var array
-     */
-    protected $content;
-    
-    /**
-     * @var int
-     */
-    protected $lastModified = 0;
-    
-    /**
-     * setContent
-     *
-     * Sets the content property, and if the title is empty, sets that one,
-     * too.
-     *
-     * @param array $content
-     *
-     * @return void
-     */
-    protected function setContent (array $content): void
-    {
-        $this->content = $content;
-    }
-    
-    /**
-     * setLastModified
-     *
-     * Sets the last modified property.
-     *
-     * @param int $lastModified
-     *
-     * @return void
-     */
-    protected function setLastModified (int $lastModified): void
-    {
-        $this->lastModified = $lastModified;
-    }
+  /**
+   * @var array
+   */
+  protected $content;
+  
+  /**
+   * @var int
+   */
+  protected $lastModified = 0;
+  
+  /**
+   * setContent
+   *
+   * Sets the content property, and if the title is empty, sets that one,
+   * too.
+   *
+   * @param array $content
+   *
+   * @return void
+   */
+  protected function setContent(array $content): void
+  {
+    $this->content = $content;
+  }
+  
+  /**
+   * setLastModified
+   *
+   * Sets the last modified property.
+   *
+   * @param int $lastModified
+   *
+   * @return void
+   */
+  protected function setLastModified(int $lastModified): void
+  {
+    $this->lastModified = $lastModified;
+  }
 }
