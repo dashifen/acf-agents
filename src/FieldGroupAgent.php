@@ -10,7 +10,7 @@ use Dashifen\ACFAgent\Repositories\FieldGroup;
 use Dashifen\WPHandler\Handlers\HandlerInterface;
 use Dashifen\WPHandler\Handlers\HandlerException;
 
-class FieldGroupAgent extends AbstractAgent
+abstract class AbstractFieldGroupAgent extends AbstractAgent
 {
   /**
    * @var string
@@ -39,7 +39,15 @@ class FieldGroupAgent extends AbstractAgent
   public function initialize(): void
   {
     if (!$this->isInitialized()) {
-      $this->addAction('init', 'importFieldGroups');
+      
+      // this filter can "switch" the true for a false and, thus, turn off
+      // importing.  otherwise, the import action would always run and that
+      // might not be needed under some circumstances.
+      
+      if (apply_filters('acf-agent-import', true)) {
+        $this->addAction('init', 'importFieldGroups');
+      }
+      
       $this->addAction('save_post_acf-field-group', 'exportCustomFieldGroups', 1000);
     }
   }
@@ -183,7 +191,7 @@ class FieldGroupAgent extends AbstractAgent
   protected function exportCustomFieldGroups(int $postId): void
   {
     [$acfName, $filename] = $this->getFieldGroupDetails($postId);
-    if (!empty($acfName)) {
+    if (!empty($acfName) && $this->shouldExport($acfName)) {
       
       // armed with the name of an ACF group, we can get it's contents,
       // i.e. the fields in the group, as well.  then, as long as it has
@@ -198,6 +206,19 @@ class FieldGroupAgent extends AbstractAgent
       }
     }
   }
+  
+  /**
+   * shouldExport
+   *
+   * Uses the name of an ACF Field Group to determine if this is one that we
+   * need to export.  Allows our export operation to take place in multiple
+   * plugins/themes without exporting everything over and over again.
+   *
+   * @param string $acfName
+   *
+   * @return bool
+   */
+  abstract protected function shouldExport(string $acfName): bool;
   
   /**
    * getFieldGroupDetails
