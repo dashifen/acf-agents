@@ -273,4 +273,19 @@ abstract class AbstractFieldGroupAgent extends AbstractAgent
     
     return json_encode($json ?? '', JSON_PRETTY_PRINT);
   }
+  
+  /**
+   * getGroupId
+   *
+   * Returns the post ID for the acf-field-group post named by our parameter.
+   * This method is not used within this object; it's here to be a utility
+   * method its children.
+   *
+   * @param string $acfName
+   *
+   * @return int
+   */
+  protected function getGroupId(string $acfName): int {
+    return get_page_by_path($acfName, OBJECT, 'acf-field-group')->ID;
+  }
 }
