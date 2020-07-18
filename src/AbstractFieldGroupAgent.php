@@ -285,7 +285,7 @@ abstract class AbstractFieldGroupAgent extends AbstractAgent
    *
    * @return int
    */
-  protected function getGroupId(string $acfName): int {
+  protected function getFieldGroupId(string $acfName): int {
     return get_page_by_path($acfName, OBJECT, 'acf-field-group')->ID;
   }
 }
