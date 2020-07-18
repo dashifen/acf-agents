@@ -208,19 +208,6 @@ abstract class AbstractFieldGroupAgent extends AbstractAgent
   }
   
   /**
-   * shouldExport
-   *
-   * Uses the name of an ACF Field Group to determine if this is one that we
-   * need to export.  Allows our export operation to take place in multiple
-   * plugins/themes without exporting everything over and over again.
-   *
-   * @param string $acfName
-   *
-   * @return bool
-   */
-  abstract protected function shouldExport(string $acfName): bool;
-  
-  /**
    * getFieldGroupDetails
    *
    * Gets the name and excerpt for the specified post and returns them.
@@ -251,6 +238,19 @@ abstract class AbstractFieldGroupAgent extends AbstractAgent
     
     return $wpdb->get_row($statement, ARRAY_N);
   }
+  
+  /**
+   * shouldExport
+   *
+   * Uses the name of an ACF Field Group to determine if this is one that we
+   * need to export.  Allows our export operation to take place in multiple
+   * plugins/themes without exporting everything over and over again.
+   *
+   * @param string $acfName
+   *
+   * @return bool
+   */
+  abstract protected function shouldExport(string $acfName): bool;
   
   /**
    * getFieldGroupContents
