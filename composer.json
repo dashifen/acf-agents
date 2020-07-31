@@ -21,8 +21,7 @@
     "optimize-autoloader": true
   },
   "require": {
-    "php": ">=7.3",
-    "ext-json": "*",
-    "dashifen/wp-handler": "^9.6"
+    "php": ">=7.4",
+    "dashifen/wp-handler": "^10.0"
   }
 }

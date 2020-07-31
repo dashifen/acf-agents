@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b57f5a23ed22eb90ef83f0b379333a60",
+    "content-hash": "1a27baa88b7b545ab80427ba33a52bda",
     "packages": [
         {
             "name": "dashifen/collection",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dashifen/collection.git",
-                "reference": "03ba9bddc0ce0cae3e6e38148ae83f18b1c53a02"
+                "reference": "9aad3915d47ae4e29e44aae0a900a0619f40a357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dashifen/collection/zipball/03ba9bddc0ce0cae3e6e38148ae83f18b1c53a02",
-                "reference": "03ba9bddc0ce0cae3e6e38148ae83f18b1c53a02",
+                "url": "https://api.github.com/repos/dashifen/collection/zipball/9aad3915d47ae4e29e44aae0a900a0619f40a357",
+                "reference": "9aad3915d47ae4e29e44aae0a900a0619f40a357",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.4"
             },
             "type": "project",
             "autoload": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "An abstract object from which concrete collections can be built.",
-            "time": "2020-01-11T11:15:44+00:00"
+            "time": "2020-07-29T15:00:49+00:00"
         },
         {
             "name": "dashifen/exception",
@@ -160,24 +160,24 @@
         },
         {
             "name": "dashifen/wp-handler",
-            "version": "9.6.1",
+            "version": "10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dashifen/wp-handler.git",
-                "reference": "d39cc54f789f483007f39595b84158dd355ffb75"
+                "reference": "24a45677779a920b35bd1baa26fc9a37bc454df4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/d39cc54f789f483007f39595b84158dd355ffb75",
-                "reference": "d39cc54f789f483007f39595b84158dd355ffb75",
+                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/24a45677779a920b35bd1baa26fc9a37bc454df4",
+                "reference": "24a45677779a920b35bd1baa26fc9a37bc454df4",
                 "shasum": ""
             },
             "require": {
-                "dashifen/collection": "^1",
+                "dashifen/collection": "^2",
                 "dashifen/exception": "^1",
                 "dashifen/repository": "^2",
                 "dashifen/transformer": "^2",
-                "php": ">=7.3"
+                "php": ">=7.4"
             },
             "type": "project",
             "autoload": {
@@ -197,7 +197,7 @@
                 }
             ],
             "description": "An object to define handlers for various WordPress action and filter hooks using protected methods. ",
-            "time": "2020-04-30T17:44:04+00:00"
+            "time": "2020-07-29T15:18:10+00:00"
         }
     ],
     "packages-dev": [],
@@ -207,8 +207,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.3",
-        "ext-json": "*"
+        "php": ">=7.4"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
